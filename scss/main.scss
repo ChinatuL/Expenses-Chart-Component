@@ -1,0 +1,103 @@
+@import "config";
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: $cream;
+    font-size: $font-size;
+    font-family: $font-family;
+    font-weight: getWeight(light);
+}
+
+.main {
+    width: 90%;
+    margin: auto 10%;
+
+    .chart {
+        width: 100%;
+
+        &__heading {
+            display: flex;
+            justify-content: space-between;
+            border-radius: 0.7rem;
+            padding: 1.3rem;
+            background-color: $soft-red;
+            color: $cream;
+            line-height: 1.7rem;
+
+            h1 {
+                font-size: 1rem;
+                font-weight: getWeight(light);
+            }
+
+            &-balance {
+                font-weight: getWeight(bold);
+                font-size: 1.5rem;
+            }
+        }
+
+        &__content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            border-radius: 0.7rem;
+            margin-top: 1.5rem;
+            padding: 0 0.8rem;
+            background-color: $very-pale-orange;
+
+            &-title {
+                padding: 1.2rem 0 1.5rem;
+                font-size: 1.5rem;
+                color: $dark-brown;
+            }
+
+            #myChart {
+                cursor: pointer;
+            }
+
+            &-divider {
+                margin: 1.3rem 0;
+                color: $medium-brown;
+            }
+
+            &-footer {
+                padding-bottom: 1.5rem;
+                .total {
+                    padding-bottom: 0.5rem;
+                    color: $medium-brown;
+
+                    &-summary {
+                        display: flex;
+                        justify-content: space-between;
+
+                        .amount {
+                            font-size: 2rem;
+                            font-weight: getWeight(bold);
+                            color: $dark-brown;
+                        }
+
+                        .interest {
+                            color: $medium-brown;
+                            &-amount {
+                                text-align: right;
+                                font-weight: getWeight(bold);
+                                color: $dark-brown;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include mediaQueries {
+    .main {
+        width: 35%;
+        margin: auto 65%;
+    }
+}

@@ -1,0 +1,97 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: hsl(27, 66%, 92%);
+  font-size: 18px;
+  font-family: "DM Sans", sans-serif;
+  font-weight: 400;
+}
+
+.main {
+  width: 90%;
+  margin: auto 10%;
+}
+.main .chart {
+  width: 100%;
+}
+.main .chart__heading {
+  display: flex;
+  justify-content: space-between;
+  border-radius: 0.7rem;
+  padding: 1.3rem;
+  background-color: hsl(10, 79%, 65%);
+  color: hsl(27, 66%, 92%);
+  line-height: 1.7rem;
+}
+.main .chart__heading h1 {
+  font-size: 1rem;
+  font-weight: 400;
+}
+.main .chart__heading-balance {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+.main .chart__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 0.7rem;
+  margin-top: 1.5rem;
+  padding: 0 0.8rem;
+  background-color: hsl(33, 100%, 98%);
+}
+.main .chart__content-title {
+  padding: 1.2rem 0 1.5rem;
+  font-size: 1.5rem;
+  color: hsl(25, 47%, 15%);
+}
+.main .chart__content #myChart {
+  cursor: pointer;
+}
+.main .chart__content-divider {
+  margin: 1.3rem 0;
+  color: hsl(28, 10%, 53%);
+}
+.main .chart__content-footer {
+  padding-bottom: 1.5rem;
+}
+.main .chart__content-footer .total {
+  padding-bottom: 0.5rem;
+  color: hsl(28, 10%, 53%);
+}
+.main .chart__content-footer .total-summary {
+  display: flex;
+  justify-content: space-between;
+}
+.main .chart__content-footer .total-summary .amount {
+  font-size: 2rem;
+  font-weight: 700;
+  color: hsl(25, 47%, 15%);
+}
+.main .chart__content-footer .total-summary .interest {
+  color: hsl(28, 10%, 53%);
+}
+.main .chart__content-footer .total-summary .interest-amount {
+  text-align: right;
+  font-weight: 700;
+  color: hsl(25, 47%, 15%);
+}
+
+@media screen and (min-width: 768px) {
+  .main {
+    width: 35%;
+    margin: auto 65%;
+  }
+}/*# sourceMappingURL=main.css.map */
