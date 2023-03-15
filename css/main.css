@@ -1,9 +1,9 @@
 *,
 *::before,
 *::after {
-  margin: 0;
   padding: 0;
   box-sizing: 0;
+  margin: 0;
 }
 
 body {
@@ -29,8 +29,8 @@ body {
 .main .chart__heading {
   display: flex;
   justify-content: space-between;
-  border-radius: 0.7rem;
   padding: 1.3rem;
+  border-radius: 0.7rem;
   background-color: hsl(10, 79%, 65%);
   color: hsl(27, 66%, 92%);
   line-height: 1.7rem;
@@ -47,15 +47,19 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding: 0 0.8rem;
   border-radius: 0.7rem;
   margin-top: 1.5rem;
-  padding: 0 0.8rem;
   background-color: hsl(33, 100%, 98%);
+}
+.main .chart__content-canvas {
+  position: relative;
+  height: 10rem;
 }
 .main .chart__content-title {
   padding: 1.2rem 0 1.5rem;
-  font-size: 1.5rem;
   color: hsl(25, 47%, 15%);
+  font-size: 1.5rem;
 }
 .main .chart__content #myChart {
   cursor: pointer;
@@ -76,22 +80,31 @@ body {
   justify-content: space-between;
 }
 .main .chart__content-footer .total-summary .amount {
+  color: hsl(25, 47%, 15%);
   font-size: 2rem;
   font-weight: 700;
-  color: hsl(25, 47%, 15%);
 }
 .main .chart__content-footer .total-summary .interest {
   color: hsl(28, 10%, 53%);
 }
 .main .chart__content-footer .total-summary .interest-amount {
+  color: hsl(25, 47%, 15%);
   text-align: right;
   font-weight: 700;
-  color: hsl(25, 47%, 15%);
 }
 
 @media screen and (min-width: 768px) {
   .main {
-    width: 35%;
-    margin: auto 65%;
+    width: 50%;
+    margin: auto 50%;
+  }
+  .chart__content-canvas {
+    height: 15rem !important;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .main {
+    width: 40%;
+    margin: auto 60%;
   }
 }/*# sourceMappingURL=main.css.map */

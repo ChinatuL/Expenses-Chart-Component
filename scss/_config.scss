@@ -21,10 +21,16 @@ $weights: (
     }
 }
 
+@mixin mediaQueries2 {
+    @media screen and (min-width: 1000px) {
+        @content;
+    }
+}
+
 *,
 *::before,
 *::after {
-    margin: 0;
     padding: 0;
     box-sizing: 0;
+    margin: 0;
 }

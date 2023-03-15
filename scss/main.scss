@@ -23,8 +23,8 @@ body {
         &__heading {
             display: flex;
             justify-content: space-between;
-            border-radius: 0.7rem;
             padding: 1.3rem;
+            border-radius: 0.7rem;
             background-color: $soft-red;
             color: $cream;
             line-height: 1.7rem;
@@ -44,15 +44,20 @@ body {
             display: flex;
             flex-direction: column;
             justify-content: center;
+            padding: 0 0.8rem;
             border-radius: 0.7rem;
             margin-top: 1.5rem;
-            padding: 0 0.8rem;
             background-color: $very-pale-orange;
+
+            &-canvas {
+                position: relative;
+                height: 10rem;
+            }
 
             &-title {
                 padding: 1.2rem 0 1.5rem;
-                font-size: 1.5rem;
                 color: $dark-brown;
+                font-size: 1.5rem;
             }
 
             #myChart {
@@ -66,6 +71,7 @@ body {
 
             &-footer {
                 padding-bottom: 1.5rem;
+
                 .total {
                     padding-bottom: 0.5rem;
                     color: $medium-brown;
@@ -75,17 +81,17 @@ body {
                         justify-content: space-between;
 
                         .amount {
+                            color: $dark-brown;
                             font-size: 2rem;
                             font-weight: getWeight(bold);
-                            color: $dark-brown;
                         }
 
                         .interest {
                             color: $medium-brown;
                             &-amount {
+                                color: $dark-brown;
                                 text-align: right;
                                 font-weight: getWeight(bold);
-                                color: $dark-brown;
                             }
                         }
                     }
@@ -97,7 +103,18 @@ body {
 
 @include mediaQueries {
     .main {
-        width: 35%;
-        margin: auto 65%;
+        width: 50%;
+        margin: auto 50%;
+    }
+
+    .chart__content-canvas {
+        height: 15rem !important;
+    }
+}
+
+@include mediaQueries2 {
+    .main {
+        width: 40%;
+        margin: auto 60%;
     }
 }
