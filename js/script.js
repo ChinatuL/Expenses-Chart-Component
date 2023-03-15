@@ -60,8 +60,7 @@ const config = {
             padding: 0,
         },
         animation: {
-            duration: 2000,
-            easing: "easeInSine",
+            duration: 1000,
         },
         plugins: {
             legend: {
